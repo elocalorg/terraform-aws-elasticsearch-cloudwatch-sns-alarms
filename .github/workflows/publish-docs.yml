@@ -1,0 +1,21 @@
+name: Publish README to Confluence
+
+on:
+  push:
+    tags:
+      - "[0-9]*"
+  workflow_dispatch:
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4.2.2
+
+      - uses: elocalorg/github-workflows/.github/actions/publish-to-confluence@master
+        with:
+          parent_page_id: ${{ vars.CONFLUENCE_TERRAFORM_MODULES_PARENT_PAGE_ID }}
+          confluence_base_url: ${{ vars.CONFLUENCE_BASE_URL }}
+          confluence_space_key: ${{ vars.CONFLUENCE_VIKING_SPACE_KEY }}
+          confluence_oidc_client_id: ${{ secrets.CONFLUENCE_OIDC_CLIENT_ID }}
+          confluence_oidc_client_secret: ${{ secrets.CONFLUENCE_OIDC_CLIENT_SECRET }}
