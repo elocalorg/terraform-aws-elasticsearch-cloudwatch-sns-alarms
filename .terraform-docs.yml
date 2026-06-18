@@ -1,0 +1,27 @@
+formatter: "markdown table"
+header-from: main.tf
+content: |-
+  {{ .Requirements }}
+  {{ .Providers }}
+  {{ .Inputs }}
+  {{ .Modules }}
+  {{ .Outputs }}
+  {{ .Resources }}
+  {{ .Footer }}
+output:
+  file: README.md
+  mode: inject
+  template: |-
+    <!-- BEGIN_TF_DOCS -->
+    {{ .Content }}
+    <!-- END_TF_DOCS -->
+sort:
+  enabled: true
+  by: name
+settings:
+  description: true
+  sensitive: true
+  escape: true
+  type: true
+  lockfile: true
+  hide-empty: true
