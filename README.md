@@ -6,6 +6,8 @@
 
 ## Status
 
+<ac:structured-macro ac:name="status"><ac:parameter ac:name="colour">Red</ac:parameter><ac:parameter ac:name="title">Deprecated</ac:parameter></ac:structured-macro>
+
 > ⚠️ **Deprecated** — superseded by [terraform-aws-opensearch-alarms](https://github.com/elocalorg/terraform-aws-opensearch-alarms). Amazon Elasticsearch Service is end-of-life; AWS migrated all remaining clusters to OpenSearch. No new features will be added; critical fixes only. Existing callers should migrate to the opensearch-alarms module.
 
 ## Overview
