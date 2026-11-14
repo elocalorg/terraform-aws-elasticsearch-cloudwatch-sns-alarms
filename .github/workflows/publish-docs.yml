@@ -2,8 +2,11 @@ name: Publish README to Confluence
 
 on:
   push:
+    branches:
+      - "master"
     tags:
       - "[0-9]*"
+      - "v[0-9]*"
   workflow_dispatch:
 
 jobs:

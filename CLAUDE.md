@@ -12,7 +12,7 @@ Before making changes, read the relevant sub-pages under [Terraform](https://elo
 
 ## Confluence publish workflow
 
-The README is auto-published to Confluence on each tag push using the centralized composite action. Do not copy the script locally:
+The README is auto-published to Confluence on every push to `master` and on each tag push using the centralized composite action. Do not copy the script locally:
 
 ```yaml
 uses: elocalorg/github-workflows/.github/actions/publish-to-confluence@master
